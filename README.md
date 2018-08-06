@@ -16,14 +16,17 @@ Extend these gateway views to create your application views.
 * ProxyViewPostOnly
 * ProxyViewPutOnly
 
-```from rest_framework_proxy_gateway.views import ProxyViewPostOnly
+```
+# Example View
+
+from rest_framework_proxy_gateway.views import ProxyViewPostOnly
 
 class MyPostOnlyView(ProxyViewPostOnly):
     source = 'api/objects'
 ```
 
 # Mixins
-Use these gateway mixins to create your custom application views, if the provided views are not sufficient.
+Alternatively, use these gateway mixins to create your custom application views, if the provided views are not sufficient.
 * BlockDelete
 * BlockGet
 * BlockOptions
@@ -31,10 +34,13 @@ Use these gateway mixins to create your custom application views, if the provide
 * BlockPost
 * BlockPut
 
-```from rest_framework_proxy.views import ProxyView
+```
+# Example View from Mixins
+
+from rest_framework_proxy.views import ProxyView
 from rest_framework_proxy_gateway.mixins import BlockDelete, BlockOptions
 
 class MyView(BlockDelete, BlockOptions, ProxyView):
-```
 
-### The ProxyView class must be last in the class list.
+### # The ProxyView class must be last in the class list.
+```
