@@ -42,5 +42,5 @@ from rest_framework_proxy_gateway.mixins import BlockDelete, BlockOptions
 
 class MyView(BlockDelete, BlockOptions, ProxyView):
 
-### # The ProxyView class must be last in the class list.
+# The ProxyView class must be last in the class list.
 ```
